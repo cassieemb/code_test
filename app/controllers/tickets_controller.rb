@@ -33,6 +33,15 @@ class TicketsController < ApplicationController
           @tag.save
         end
 
+        # call most used tag method from tag model
+        most_used_tag = Tag.return_most_used_tag
+        response = HTTParty.post("https://webhook.site/5ade13a6-120c-46c7-9863-7bfb4ba503bd",
+                                 :body => {
+                                   :tag => most_used_tag[0],
+                                   :count => most_used_tag[1],
+                                 }.to_json,
+                                 :headers => {'Content-Type' => 'application/json'}
+        )
       # if title or user ID are not present, return error to sender
       else
         render json: @ticket.errors, status: :unprocessable_entity

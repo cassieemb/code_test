@@ -2,6 +2,7 @@ class TagsController < ApplicationController
   before_action :set_tag, only: %i[ show update destroy ]
 
   # call Tag model method for returning tag with the most usage
+=begin
   def return_most
     most_used_tag = Tag.return_most_used_tag
     response = HTTParty.post("https://webhook.site/5ade13a6-120c-46c7-9863-7bfb4ba503bd",
@@ -10,6 +11,7 @@ class TagsController < ApplicationController
     )
     render json: response
   end
+=end
 
   def destroy
 
