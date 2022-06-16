@@ -40,5 +40,5 @@ Feel free to reach out if you have any questions!
 4. Replace URL in post request on line 38 of `tickets_controller.rb` with url to webhook site or other location to send tag info to
 5. Run `rails s` 
 6. Startup ngrok server on port 3000
-7. Send post request with params to ngrok tunnel 
+7. Send post request with params to `https://hostname.ngrok.io/tickets`
 
