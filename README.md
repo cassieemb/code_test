@@ -35,9 +35,10 @@ Feel free to reach out if you have any questions!
 ## Steps to Recreate 
 
 1. Clone or Download Github Repo 
-2. Run Bundle Install 
-3. Run rake db:setup 
-4. Run rails s 
-5. Startup ngrok server on port 3000
-6. Send post request with params to ngrok tunnel 
+2. Run `bundle install  
+3. Run `rake db:setup` 
+4. Replace URL in post request on line 38 of `tickets_controller.rb` with url to webhook site or other location to send tag info to
+5. Run `rails s` 
+6. Startup ngrok server on port 3000
+7. Send post request with params to ngrok tunnel 
 
