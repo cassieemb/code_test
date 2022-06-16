@@ -35,7 +35,7 @@ Feel free to reach out if you have any questions!
 ## Steps to Recreate 
 
 1. Clone or Download Github Repo 
-2. Run `bundle install  
+2. Run `bundle install`  
 3. Run `rake db:setup` 
 4. Replace URL in post request on line 38 of `tickets_controller.rb` with url to webhook site or other location to send tag info to
 5. Run `rails s` 
